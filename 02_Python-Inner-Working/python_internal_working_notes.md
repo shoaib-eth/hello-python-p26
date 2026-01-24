@@ -268,6 +268,13 @@ Understanding internals helps with:
 ### Q4. Why Python is slower than C?
 ✔ Interpreter loop + dynamic typing
 
+### Q5. Explain Python execution internally”
+
+Start like this 👇
+
+“When I run a Python program, the source code is first compiled into bytecode. This bytecode is then executed by the Python Virtual Machine, which is essentially a runtime interpreter loop written in C (in CPython). Bytecode is cached inside __pycache__ for imported modules to optimize performance.”
+---
+
 ---
 
 ## 13. Final Mental Model
