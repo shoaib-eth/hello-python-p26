@@ -1,7 +1,7 @@
-print("Hello 👋 Python Learnners ")
-
 def Namaste(n):
     print(n)
 
-Namaste("Hello 👋")
-Namaste(10)
+if __name__ == "__main__":
+    print("Hello 👋 Python Learnners")
+    Namaste("Hello 👋")
+    Namaste(10)
