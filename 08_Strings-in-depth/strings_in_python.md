@@ -443,6 +443,10 @@ Strings are:
 
 > **Strings in Python are immutable Unicode objects with powerful built-in methods for text processing.**
 
+## 🧠 One-line mastery statement
+
+> **Python strings are immutable Unicode sequences with a rich set of built-in methods for text processing.**
+
 ---
 
 ✅ End of Strings Notes
