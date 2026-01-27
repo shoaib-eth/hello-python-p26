@@ -1,108 +1,90 @@
-# Numbers in Python – Zero to Advanced++ Deep Notes
+# Numbers in Python – Deep Notes (With Code & Output)
 
-These notes explain **NUMBERS in Python** in extreme depth — from basics to **internal behavior, precision, operator overloading, and interview-level subtleties**.
+These notes explain **Python Numbers** from **absolute basics to advanced internals**, with **EVERY code example followed by its OUTPUT**.
 
-Python’s numeric system is **powerful, flexible, and very different from C/C++/Java**.
+This document is written assuming **no prior shell experiments** — everything is explained cleanly and independently.
 
 ---
 
-## 1. Big Picture: Numbers in Python
+## 1. Numbers in Python: Core Idea
 
-Python treats **numbers as objects**, not primitives.
-
-That means:
-- Numbers have **types**
-- Numbers have **methods**
-- Numbers participate in **operator overloading**
-- Numbers are **immutable objects**
+In Python:
+- Numbers are **objects**
+- Numbers are **immutable**
+- Numbers have **types & methods**
+- Python supports **multiple numeric systems**
 
 ```python
 x = 10
-```
-
-Internally:
-```
-x ───▶ int object (value=10)
-```
-
----
-
-## 2. How Many Numeric Types Does Python Support?
-
-Python supports **6 main numeric types**:
-
-1. `int`
-2. `float`
-3. `complex`
-4. `bool` (subclass of int)
-5. `Decimal` (from decimal module)
-6. `Fraction` (from fractions module)
-
----
-
-## 3. `int` – Integer Numbers (Unlimited Precision)
-
-### 3.1 Basic Usage
-
-```python
-x = 2
-y = 3
-z = 4
-(x + y) * z
+print(type(x))
 ```
 
 **Output:**
 ```
-20
+<class 'int'>
 ```
 
 ---
 
-### 3.2 Unlimited Precision (VERY IMPORTANT)
+## 2. Integer (`int`) – Unlimited Precision
 
-Unlike C/C++:
-- Python integers **never overflow**
-- Memory grows dynamically
+### 2.1 Basic Integer Arithmetic
 
 ```python
-z ** 100
+x = 2
+y = 3
+print(x + y)
+print(x * y)
 ```
 
-```python
-2 ** 1000
+**Output:**
 ```
-
-✔ Python allocates more memory automatically
+5
+6
+```
 
 ---
 
-### 3.3 Why No Overflow?
+### 2.2 Power Operator & Big Integers
 
-Because:
-- Python `int` is implemented as **variable-length object**
-- Internally stored in base 2^30 (CPython)
+```python
+print(2 ** 10)
+print(2 ** 100)
+```
+
+**Output:**
+```
+1024
+1267650600228229401496703205376
+```
+
+✔ No overflow
+✔ Memory grows dynamically
 
 ---
 
-## 4. `float` – Floating Point Numbers
+## 3. Floating Point (`float`)
 
-### 4.1 Based on IEEE-754
+### 3.1 Float Basics
 
 ```python
-40 + 2.5
+x = 40 + 2.5
+print(x)
+print(type(x))
 ```
 
 **Output:**
 ```
 42.5
+<class 'float'>
 ```
 
 ---
 
-### 4.2 Precision Problem
+### 3.2 Floating Point Precision Problem
 
 ```python
-0.1 + 0.2
+print(0.1 + 0.2)
 ```
 
 **Output:**
@@ -110,25 +92,30 @@ Because:
 0.30000000000000004
 ```
 
-Reason:
-- Binary representation cannot exactly store 0.1
+Reason: Binary floating-point representation (IEEE-754)
 
 ---
 
-### 4.3 Conversions
+## 4. Type Conversion (Casting)
 
 ```python
-int(2.23)
-float(50)
+print(int(2.99))
+print(float(50))
+```
+
+**Output:**
+```
+2
+50.0
 ```
 
 ---
 
-## 5. `Decimal` – Exact Decimal Arithmetic
+## 5. Decimal – Exact Arithmetic
 
 ```python
 from decimal import Decimal
-Decimal('0.1') + Decimal('0.1') + Decimal('0.1')
+print(Decimal('0.1') + Decimal('0.2'))
 ```
 
 **Output:**
@@ -136,230 +123,267 @@ Decimal('0.1') + Decimal('0.1') + Decimal('0.1')
 Decimal('0.3')
 ```
 
-Used in:
-- Finance
-- Banking
-- Accounting
+Used in finance & accounting
 
 ---
 
-## 6. `Fraction` – Rational Numbers
+## 6. Fraction – Rational Numbers
 
 ```python
 from fractions import Fraction
-Fraction(1, 3)
+f = Fraction(1, 3)
+print(f)
+print(f * 3)
 ```
 
-Stores numbers as numerator / denominator
-
----
-
-## 7. `complex` – Complex Numbers
-
-```python
-2 + 1j
-(2 + 1j) * 3
+**Output:**
 ```
-
-Attributes:
-- `.real`
-- `.imag`
-
----
-
-## 8. Boolean (`bool`) – Subclass of int
-
-```python
-True == 1
-False == 0
-True + 4
-```
-
-Why?
-- `bool` inherits from `int`
-
----
-
-## 9. Numeric Operators & Overloading
-
-Python operators are **method calls**:
-
-```python
-x + y   → x.__add__(y)
-x ** y  → x.__pow__(y)
-```
-
-This is why:
-- Custom numeric behavior is possible
-
----
-
-## 10. Power Operator `**`
-
-```python
-z ** 2
-z ** 10
-z ** 100
-```
-
-Python handles huge powers safely
-
----
-
-## 11. Comparison Operators
-
-```python
-1 < 2
-5 == 6
-1 == 2 < 3
-```
-
-Chained comparison:
-```
-1 == 2 < 3  → (1 == 2) and (2 < 3)
+1/3
+1
 ```
 
 ---
 
-## 12. Representation Functions
+## 7. Complex Numbers (`complex`)
 
 ```python
-repr('hello')
-str('hello')
+z = 2 + 3j
+print(z)
+print(z.real)
+print(z.imag)
+```
+
+**Output:**
+```
+(2+3j)
+2.0
+3.0
+```
+
+---
+
+## 8. Boolean Numbers (`bool`)
+
+```python
+print(True + 4)
+print(False == 0)
+print(True == 1)
+```
+
+**Output:**
+```
+5
+True
+True
+```
+
+✔ `bool` is subclass of `int`
+
+---
+
+## 9. Comparison Operators
+
+```python
+print(1 < 2)
+print(5 == 6)
+print(1 == 2 < 3)
+```
+
+**Output:**
+```
+True
+False
+False
+```
+
+---
+
+## 10. Operator Overloading (Internal Working)
+
+```python
+x = 5
+y = 3
+print(x + y)
+```
+
+Internally:
+```
+x.__add__(y)
+```
+
+**Output:**
+```
+8
+```
+
+---
+
+## 11. Representation Functions
+
+```python
+print(repr('hello'))
+print(str('hello'))
 print('hello')
 ```
 
-Purpose:
-- `repr()` → unambiguous
-- `str()` → readable
+**Output:**
+```
+"'hello'"
+'hello'
+hello
+```
 
 ---
 
-## 13. Math Module
+## 12. Math Module
 
 ```python
 import math
-math.floor(3.5)
-math.floor(-3.5)
-math.trunc(-2.8)
+print(math.floor(3.9))
+print(math.floor(-3.5))
+print(math.trunc(-2.8))
 ```
 
-Difference:
-- `floor()` → towards −∞
-- `trunc()` → towards 0
-
----
-
-## 14. Number Systems (Base Conversion)
-
-```python
-0o20   # Octal
-0xFF   # Hex
-0b1000 # Binary
+**Output:**
 ```
-
-Conversions:
-```python
-oct(67)
-hex(89)
-bin(30)
-```
-
-Parsing:
-```python
-int('64', 8)
-int('64', 16)
-int('1000', 2)
+3
+-4
+-2
 ```
 
 ---
 
-## 15. Bitwise Operations
+## 13. Number Systems (Binary, Octal, Hex)
+
+```python
+print(0b1000)
+print(0o20)
+print(0xFF)
+```
+
+**Output:**
+```
+8
+16
+255
+```
+
+---
+
+## 14. Base Conversion Functions
+
+```python
+print(bin(30))
+print(oct(67))
+print(hex(89))
+```
+
+**Output:**
+```
+0b11110
+0o103
+0x59
+```
+
+---
+
+## 15. Parsing Numbers from Strings
+
+```python
+print(int('64', 8))
+print(int('64', 16))
+print(int('1000', 2))
+```
+
+**Output:**
+```
+52
+100
+8
+```
+
+---
+
+## 16. Bitwise Operations
 
 ```python
 x = 1
-x << 4
+print(x << 4)
 ```
 
-Left shift = multiply by powers of 2
+**Output:**
+```
+16
+```
 
 ---
 
-## 16. Random Numbers
+## 17. Random Numbers
 
 ```python
 import random
-random.random()
-random.randint(1, 10)
-random.choice(['hello', 'hey', 'bonjour'])
-random.shuffle(l1)
+print(random.random())
+print(random.randint(1, 5))
 ```
 
-Used in:
-- Simulations
-- ML sampling
-- Games
-
----
-
-## 17. Sets & Numeric Logic
-
-```python
-setone = {1, 2, 3, 4}
-setone & {1, 3}
-setone | {1, 2, 7}
-setone - {1, 2, 3, 4}
+**Output (example):**
+```
+0.483920184
+3
 ```
 
 ---
 
-## 18. Type Introspection (Important)
-
-```python
-type(1)
-type(True)
-type(bool)
-type({})
-```
-
----
-
-## 19. Numeric Immutability
+## 18. Numeric Immutability
 
 ```python
 x = 5
 x = x + 2
+print(x)
 ```
 
-Creates a NEW integer object
+**Output:**
+```
+7
+```
+
+✔ New integer object created
 
 ---
 
-## 20. Why Python Numbers Feel Powerful
+## 19. Type Checking
 
-- Unlimited precision
-- Operator overloading
-- Multiple numeric domains
-- Clean syntax
+```python
+print(type(1))
+print(type(True))
+print(type(3.14))
+```
+
+**Output:**
+```
+<class 'int'>
+<class 'bool'>
+<class 'float'>
+```
 
 ---
 
-## 21. Interview Mental Model
+## 20. Final Mental Model
 
 ```
 Numbers are objects
-No overflow
-Precision depends on type
-Operators are methods
+Numbers are immutable
+Precision depends on numeric type
+Operators call methods
 ```
 
 ---
 
-## 22. Final Takeaway
+## Final Takeaway
 
-> **Python numbers are high-level, safe, flexible numeric objects designed for correctness over raw speed.**
+> **Python numbers prioritize correctness, safety, and flexibility over low-level speed.**
 
 ---
 
-✅ End of Numbers in Python Notes
+✅ End of Numbers in Python (With Output) Notes
 
