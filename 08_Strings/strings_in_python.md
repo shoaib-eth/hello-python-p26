@@ -1,4 +1,4 @@
-# Strings in Python – Zero to Advanced++ Complete Notes
+# Strings in Python – Complete Notes
 
 These notes explain **Python Strings** from **absolute basics to deep internals**, covering:
 - All string types

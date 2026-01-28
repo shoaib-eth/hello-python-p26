@@ -1,4 +1,4 @@
-# Lists in Python – Zero to Advanced++ Complete Notes
+# Lists in Python – Complete Notes
 
 These notes explain **Python Lists** from **absolute basics to deep internals**, including:
 - What lists are and why they exist

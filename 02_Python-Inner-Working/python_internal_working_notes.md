@@ -1,4 +1,4 @@
-# Python Internal Working – Deep Interview Notes
+# Python Internal Working – Notes
 
 These notes explain **how Python works internally**, from source code execution to bytecode and the Python Virtual Machine (PVM). These concepts are **frequently asked in interviews**, especially by **Big Tech & data-driven companies**.
 

@@ -1,4 +1,4 @@
-# Python Data Types – Zero to Advanced++ Deep Notes
+# Python Data Types – Deep Notes
 
 These notes explain **ALL Python data types** in **extreme depth**, starting from absolute basics to **interview + real-world + Data Science level** understanding.
 

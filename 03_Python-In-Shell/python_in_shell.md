@@ -1,4 +1,4 @@
-# Python Shell (REPL) – Zero to Advanced++ Notes
+# Python Shell (REPL) – Notes
 
 These notes explain **Python Shell / Interactive Mode** in extreme depth — from beginner concepts to **interview-grade internals**. This topic is very important for **Data Science, debugging, rapid experimentation, and interviews**.
 
