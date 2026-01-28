@@ -97,7 +97,7 @@ print(sys.getsizeof((1,2,3)))
 ### 4️⃣ Semantic Meaning (READABILITY) 🧠
 
 ```python
-user = ('Shoaib', 22, 'India')
+user = ('Alice', 22, 'India')
 ```
 
 This clearly means:
@@ -283,7 +283,7 @@ print(b)
 
 ```python
 def get_user():
-    return 'Shoaib', 22
+    return 'Alice', 22
 
 name, age = get_user()
 print(name, age)
@@ -291,7 +291,7 @@ print(name, age)
 
 **Output:**
 ```
-Shoaib 22
+Alice 22
 ```
 
 ---
