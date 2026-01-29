@@ -1,3 +1,3 @@
-from hello import Namaste;
+from hello import Namaste
 
 Namaste("Hello 👋 Python Learners!")
