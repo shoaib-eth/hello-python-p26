@@ -5,6 +5,159 @@
 
 No shortcuts. No surface talk.
 
+## Python Shell Code
+--------------------------------------------------------------------------------
+```javascript
+>>> f = open('Sample.py')
+>>> f.readline()
+'from datetime import datetime\n'
+>>> f.readline()
+'\n'
+>>> f.readline()
+'current_time = datetime.now()\n'
+>>> f.readline()
+'print(current_time)\n'
+>>> f.readline()
+''
+>>> f.readline()
+''
+// --------------------------------------------------------------------------------
+
+>>> f = open('Sample.py')
+>>> f.__next__()
+'from datetime import datetime\n'
+>>> f.__next__()
+'\n'
+>>> f.__next__()
+'current_time = datetime.now()\n'
+>>> f.__next__()
+'print(current_time)\n'
+>>> f.__next__()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    f.__next__()
+    ~~~~~~~~~~^^
+StopIteration
+// --------------------------------------------------------------------------------
+
+>>> for line in open('Sample.py'):
+...     print(line)
+... 
+from datetime import datetime
+
+
+current_time = datetime.now()
+
+print(current_time)
+
+>>> for line in open('Sample.py'):
+...     print(line, end='')
+... 
+from datetime import datetime
+
+current_time = datetime.now()
+print(current_time)
+// --------------------------------------------------------------------------------
+
+>>> f = open('Sample.py')
+>>> while True:
+...     line = f.readline()
+...     if not line: break
+...     print(line, end='')
+... 
+from datetime import datetime
+
+current_time = datetime.now()
+print(current_time)
+// --------------------------------------------------------------------------------
+
+>>> test = "Alice"
+>>> if not test:
+...     print('hello')
+... 
+>>> test = ""
+>>> if not test:
+...     print('hello')
+... 
+hello
+// --------------------------------------------------------------------------------
+
+>>> myList = [1, 2, 3, 4]
+>>> I = iter(myList)
+>>> I
+<list_iterator object at 0x102f38100>
+>>> I.__next__()
+1
+>>> I
+<list_iterator object at 0x102f38100>
+>>> I.__next__()
+2
+>>> I.__next__()
+3
+>>> I.__next__()
+4
+>>> I.__next__()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    I.__next__()
+    ~~~~~~~~~~^^
+StopIteration
+// --------------------------------------------------------------------------------
+
+>>> MyNewList = [10, 11, 12]
+>>> iter(MyNewList) is MyNewList.__iter__()
+False
+>>> iter(MyNewList) is MyNewList
+False
+// --------------------------------------------------------------------------------
+
+>>> D = {'a': 1, 'b': 2}
+>>> for key in D.keys():
+...     print(key)
+... 
+a
+b
+>>> I = iter(D)
+>>> I
+<dict_keyiterator object at 0x103b87fb0>
+>>> next(I)
+'a'
+>>> next(I)
+'b'
+>>> next(I)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    next(I)
+    ~~~~^^^
+StopIteration
+// --------------------------------------------------------------------------------
+
+>>> range(5)
+range(0, 5)
+>>> R = range(5)
+>>> R
+range(0, 5)
+>>> I = iter(R)
+>>> next(I)
+0
+>>> next(I)
+1
+>>> next(I)
+2
+>>> next(I)
+3
+>>> next(I)
+4
+>>> next(I)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    next(I)
+    ~~~~^^^
+StopIteration
+```
+--------------------------------------------------------------------------------
+
+
 ---
 
 ## 🧠 PART 0: One CORE IDEA (LOCK THIS FIRST)
