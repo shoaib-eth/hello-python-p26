@@ -3,7 +3,7 @@ class Car:
         self.brand = brand
         self.model = model
 
+
 my_car = Car("Toyta", "Fortuner")
 print(my_car.brand)
 print(my_car.model)
-

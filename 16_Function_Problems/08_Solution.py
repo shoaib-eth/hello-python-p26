@@ -2,4 +2,5 @@ def print_kwargs(**kwargs):
     for key, value in kwargs.items():
         print(f"{key}: {value}")
 
-print_kwargs(name = "Alice", Education="B.Tech", Occupation="Data Scientist")
+
+print_kwargs(name="Alice", Education="B.Tech", Occupation="Data Scientist")

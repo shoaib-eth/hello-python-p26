@@ -1,6 +1,6 @@
 import time
 
-wait_time = 1 # In seconds
+wait_time = 1  # In seconds
 max_attempts = 5
 attempts = 0
 
