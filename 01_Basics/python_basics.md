@@ -7,7 +7,7 @@ These notes explain the behavior of the following two Python files and the autom
 ## 1. File: `hello.py`
 
 ```python
-print("Hello 👋 Python Learnners ")
+print("Hello 👋 Python Learners ")
 
 def Namaste(n):
     print(n)
