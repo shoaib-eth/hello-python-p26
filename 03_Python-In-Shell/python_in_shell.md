@@ -362,7 +362,7 @@ OR
 
 ### Q5. Explain how Python shell handles imports and file changes.
 
-“When a module is imported in the Python shell, it is loaded once and cached in sys.modules. Any subsequent changes to the source file are not reflected automatically because the shell keeps using the in-memory module object. To reflect changes, we must explicitly reload the module using importlib.reload, and even then, old references may remain.”
+“When a module is imported in the Python shell, it is loaded once and cached in sys.modules. Any subsequent changes to the source file are not reflected automatically because the shell keeps using the in-memory module object. To reflect changes, we must explicitly reload the module using `importlib.reload`, and even then, old references may remain.”
 
 ---
 
