@@ -18,7 +18,7 @@ Namaste(10)
 
 ### 1.1 What happens line by line?
 
-#### 🔹 `print("Hello 👋 Python Learnners ")`
+#### 🔹 `print("Hello 👋 Python Learners ")`
 - This line executes **immediately** when the file runs.
 - It prints a greeting message to the console.
 
