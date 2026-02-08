@@ -164,8 +164,8 @@ True
 ### 7.1 f-Strings (Recommended)
 
 ```python
-name = "Shoaib"
-age = 22
+name = "Alice"
+age = 20
 print(f"My name is {name}, age {age}")
 ```
 
