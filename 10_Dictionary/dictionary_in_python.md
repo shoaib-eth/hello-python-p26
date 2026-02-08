@@ -19,7 +19,7 @@ A **dictionary** is a **mutable collection of key–value pairs**, optimized for
 - To get **O(1) average-time access**
 
 ### 🌍 Real-world examples
-- User profile → `{id: 101, name: "Shoaib"}`
+- User profile → `{id: 101, name: "Alice"}`
 - JSON / API responses
 - Config files
 - Database-like records
@@ -31,14 +31,14 @@ A **dictionary** is a **mutable collection of key–value pairs**, optimized for
 ### 2.1 Literal syntax
 
 ```python
-d = {'name': 'Shoaib', 'age': 22}
+d = {'name': 'Alice', 'age': 20}
 print(d)
 print(type(d))
 ```
 
 **Output:**
 ```
-{'name': 'Shoaib', 'age': 22}
+{'name': 'Alice', 'age': 20}
 <class 'dict'>
 ```
 
@@ -47,13 +47,13 @@ print(type(d))
 ### 2.2 `dict()` constructor
 
 ```python
-d = dict(name='Shoaib', age=22)
+d = dict(name='Alice', age=20)
 print(d)
 ```
 
 **Output:**
 ```
-{'name': 'Shoaib', 'age': 22}
+{'name': 'Alice', 'age': 20}
 ```
 
 ---
@@ -93,16 +93,16 @@ print(d)
 ## 4️⃣ Accessing & Modifying Data 🔑
 
 ```python
-d = {'name': 'Shoaib', 'age': 22}
+d = {'name': 'Alice', 'age': 20}
 print(d['name'])
-d['age'] = 23
+d['age'] = 21
 print(d)
 ```
 
 **Output:**
 ```
-Shoaib
-{'name': 'Shoaib', 'age': 23}
+Alice
+{'name': 'Alice', 'age': 21}
 ```
 
 ---
@@ -116,7 +116,7 @@ print(d.get('salary', 0))
 
 **Output:**
 ```
-Shoaib
+Alice
 0
 ```
 
@@ -133,7 +133,7 @@ print(d)
 
 **Output:**
 ```
-{'name': 'Shoaib', 'age': 23, 'city': 'Delhi'}
+{'name': 'Alice', 'age': 21, 'city': 'Delhi'}
 ```
 
 ---
@@ -149,7 +149,7 @@ print(d)
 **Output:**
 ```
 Delhi
-{'name': 'Shoaib'}
+{'name': 'Alice'}
 ```
 
 ---
@@ -235,7 +235,7 @@ print(squares)
 
 ```python
 user = {
-    'name': 'Shoaib',
+    'name': 'Alice',
     'skills': {'python': 'advanced', 'solidity': 'advanced'}
 }
 print(user['skills']['python'])
@@ -292,7 +292,7 @@ print(a)
 
 ---
 
-## 1️⃣5️⃣ Interview Questions & Answers 🎯
+## 1️⃣5️⃣ Questions & Answers 🎯
 
 ### Q1. Why dictionary keys must be immutable?
 **Ans:** Because hashing requires stable values.
