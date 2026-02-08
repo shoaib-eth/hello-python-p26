@@ -196,7 +196,7 @@ features = {'age': 22, 'salary': 50000}
 
 ---
 
-## 🔟 Interview Questions & Answers 🎯
+## 🔟 Questions & Answers 🎯
 
 ### Q1. Difference between list and tuple?
 **Ans:** List is mutable, tuple is immutable.
