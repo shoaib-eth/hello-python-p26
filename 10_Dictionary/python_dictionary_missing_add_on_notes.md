@@ -245,7 +245,7 @@ print(d)
 {'x': 0, 'y': 0, 'z': 0}
 ```
 
-## 🎯 Interview Questions & Answers
+## 🎯 Questions & Answers
 
 ### Q1. What does looping over a dict return by default?
 **Ans:** Keys.
