@@ -125,13 +125,13 @@ print(t)
 ### 3.2 Without parentheses (tuple packing)
 
 ```python
-t = 1, 2, 3
-print(t)
+t = 1, 2, 3 # It is also called tuple packing
+print(t)  # Tuple is created even without parentheses (see the output)
 ```
 
 **Output:**
 ```
-(1, 2, 3)
+(1, 2, 3) 
 ```
 
 ---
@@ -139,10 +139,10 @@ print(t)
 ### 3.3 Single-element tuple (VERY IMPORTANT ⚠️)
 
 ```python
-t = (5)
+t = (5)  # This is NOT a tuple, it’s just an integer
 print(type(t))
 
-t = (5,)
+t = (5,) # This is a single-element tuple (note the comma)
 print(type(t))
 ```
 
@@ -203,8 +203,8 @@ TypeError: 'tuple' object does not support item assignment
 ## 6️⃣ Mutable Objects INSIDE Tuples ⚠️ (INTERVIEW TRAP)
 
 ```python
-t = ([1, 2], [3, 4])
-t[0][0] = 99
+t = ([1, 2], [3, 4])  # Tuple contains lists (mutable objects) 
+t[0][0] = 99  # Modifying the inner list, not the tuple itself
 print(t)
 ```
 
@@ -252,7 +252,7 @@ print((1, 2) * 3)
 ## 9️⃣ Tuple Unpacking (VERY IMPORTANT) 🎁
 
 ```python
-a, b = (10, 20)
+a, b = (10, 20) # Unpacking the tuple into variables
 print(a)
 print(b)
 ```
@@ -299,7 +299,7 @@ Alice 22
 ## 1️⃣1️⃣ Tuples & Hashing 🔑
 
 ```python
-print(hash((1, 2, 3)))
+print(hash((1, 2, 3))) 
 ```
 
 🧠 Only hashable if all elements are hashable.
