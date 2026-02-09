@@ -1,1 +1,1 @@
-[{"name": "Python Programming", "time": "14 Hours"}, {"name": "Git and Github", "time": "2 Hours"}, {"name": "Python Pandas Library", "time": "2.5 Hours"}, {"name": "Python Numpy Library", "time": "2 Hours"}]
+[{"name": "Python Programming", "time": "14 Hours"}, {"name": "Git and Github", "time": "2 Hours"}, {"name": "Python Pandas Library", "time": "2.5 Hours"}, {"name": "Python Numpy Library", "time": "2 Hours"}, {"name": "JavaScript", "time": "20 Hours"}]
