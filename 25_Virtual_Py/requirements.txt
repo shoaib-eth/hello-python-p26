@@ -1,0 +1,7 @@
+Package   Version
+--------- -------
+asgiref   3.11.1
+Django    6.0.2
+dnspython 2.8.0
+pip       25.2
+sqlparse  0.5.5
