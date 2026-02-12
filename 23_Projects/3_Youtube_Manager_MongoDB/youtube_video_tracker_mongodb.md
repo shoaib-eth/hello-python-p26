@@ -59,7 +59,7 @@ Purpose:
 
 Example `.env` file:
 ```
-MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/
+MONGO_URI=<mongo_db_uri>
 ```
 
 When `load_dotenv()` runs:
